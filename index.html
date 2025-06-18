@@ -50,8 +50,11 @@
     
     <script>
   window.onload = function() {
-    alert("⚠️ We're sorry! This website is still under development. Some features may not work as expected. Thank you for your patience!");
-  }
+    if (!sessionStorage.getItem('alertShown')) {
+      alert("⚠️ We're sorry! This website is still under development. Some features may not work as expected. Thank you for your patience!");
+      sessionStorage.setItem('alertShown', 'true');
+    }
+  };
 </script>
 
     <!-- Preloader -->
@@ -97,7 +100,7 @@
                                     <li><a href="#">Team</a></li>
                                     <li><a href="#">Testimonials</a></li>
                                     <li><a href="#">blog</a></li>                       
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
 
                             </div>
